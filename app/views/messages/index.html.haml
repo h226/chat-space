@@ -1,5 +1,5 @@
 !!!
-%html{lang: "ja"}
+%html
   %head
     %meta{charset: "utf-8"}
   %body
@@ -13,6 +13,10 @@
         %p.side-header__box__user-name User 
         %ul.__side-header__box__menu
           %li.__new-group
+            = link_to 'new-group' do
+              %i.fa.fa-edit
+            = link_to 'edit_user' do 
+              %i.fa.fa-cog
 
 
     .group-box
@@ -35,16 +39,17 @@
         .chat-space__header__left-box__current__group__list
           %ul Member: members
       .chat-space__header__edit__btn
-        %input{:type => "button", :value => "送信"}
+        %input.edit{:type => "button", :value => "Edit"}
     .chat-space__messages
       .chat-space__messages__message
         .chat-space__messages__message__upper-info
           .chat-space__messages__message__upper-info__talker User1
           .chat-space__messages__message__upper-info__date 2019/10/24(Thu) 14:26:33
         .chat-space__messages__message__text Hola!      
-    .footer
-      .form
-        .new-message
-          .new-message__box type a message
-          .new-message__box__image
-          .new-message__box__submit__btn  
+    .chat-space__form
+      .form__new-message
+        %input.message{:name => "q", :placeholder => "type a message", :type => "search"}
+        .input-box__image
+        = link_to 'input_image_file' do
+          %i.fa.fa-image
+        %input.new-message__box__submit{:type => "submit", :value => "Send"}
