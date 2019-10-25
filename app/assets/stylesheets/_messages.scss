@@ -82,8 +82,7 @@ html, body {
   margin: 0;
   padding: 0;
   overflow:  hidden;
-}    
-  .chat-space__header {
+} .chat-space__header {
     height: 100px;
     border: solid 1px #eeeeee;
     display: flex;
@@ -119,7 +118,7 @@ html, body {
     display: block;
     padding: 46px 40px;
     margin: 0px;
-  } .chat-space__messages__message {
+  } #{&}.__message {
       padding-bottom: 40px;
       display: block;
   } .chat-space__messages__message__upper-info {
