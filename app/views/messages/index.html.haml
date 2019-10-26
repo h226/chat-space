@@ -33,23 +33,23 @@
 
   .chat-space
     .chat-space__header
-      .chat-space__header__left-box
-        .chat-space__header__left-box__current__group
+      .chat-space__left-box
+        .chat-space__header__left-box__group
           %h2 Current Group
-        .chat-space__header__left-box__current__group__list
+        .chat-space__header__lefe-box__list
           %ul Member: members
       .chat-space__header__edit__btn
-        %input.edit{:type => "button", :value => "Edit"}
+        %input.edit{type: "button", value: "Edit"}
     .chat-space__messages
-      .chat-space__messages__message
-        .chat-space__messages__message__upper-info
-          .chat-space__messages__message__upper-info__talker User1
-          .chat-space__messages__message__upper-info__date 2019/10/24(Thu) 14:26:33
-        .chat-space__messages__message__text Hola!      
+      .messages__message
+        .messages__message__upper-info
+          .messages__message__upper-info__talker User1
+          .messages__message__upper-info__date 2019/10/24(Thu) 14:26:33
+        .messages__message__text Hola!      
     .chat-space__form
       .form__new-message
-        %input.message{:name => "q", :placeholder => "type a message", :type => "search"}
+        %input.message{name: "q", placeholder: "type a message", type: "search"}
         .input-box__image
         = link_to 'input_image_file' do
           %i.fa.fa-image
-        %input.new-message__box__submit{:type => "submit", :value => "Send"}
+        %input.new-message__box__submit{type: "submit", value: "Send"}
