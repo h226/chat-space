@@ -1,0 +1,55 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+  %body
+#wrapper
+  .header グループを作成しました
+
+
+  .info-side
+    .side-header
+      .side-header__box
+        %p.side-header__box__user-name User 
+        %ul.__side-header__box__menu
+          %li.__new-group
+            = link_to 'new-group' do
+              %i.fa.fa-edit
+            = link_to 'edit_user' do 
+              %i.fa.fa-cog
+
+
+    .group-box
+      .group1
+        %p.group-name group1
+        %p.latest-message hello
+      .group2
+        %p.group-name group2
+        %p.latest-message hola
+      .group3
+        %p.group-name group3
+        %p.latest-message sayonara
+
+
+  .chat-space
+    .chat-space__header
+      .chat-space__left-box
+        .chat-space__header__left-box__group
+          %h2 Current Group
+        .chat-space__header__lefe-box__list
+          %ul Member: members
+      .chat-space__header__edit__btn
+        %input.edit{type: "button", value: "Edit"}
+    .chat-space__messages
+      .messages__message
+        .messages__message__upper-info
+          .messages__message__upper-info__talker User1
+          .messages__message__upper-info__date 2019/10/24(Thu) 14:26:33
+        .messages__message__text Hola!      
+    .chat-space__form
+      .form__new-message
+        %input.message{name: "q", placeholder: "type a message", type: "search"}
+        .input-box__image
+        = link_to 'input_image_file' do
+          %i.fa.fa-image
+        %input.new-message__box__submit{type: "submit", value: "Send"}
