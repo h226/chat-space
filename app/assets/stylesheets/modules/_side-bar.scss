@@ -40,22 +40,14 @@
       }
     }
 
-    .group-box { // groups
+    .groups {
       background-color: #2f3e51;
       height: calc(100vw - 100px);
-    } .group1 {  // group
+    } .group {
       font-size: 15px;
       color: #ffffff;
       padding-top: 20px;
       padding-left: 20px;
       padding-right: 20px;
       padding-bottom: 40px;
-    } .group2 { // group
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 40px;
-    } .group3 { // group
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 40px;
-    }
+    } 
