@@ -1,0 +1,23 @@
+.info-side
+  .side-header
+    .side-header__box
+      %p.side-header__box__user-name
+        = current_user.name
+      %ul.__side-header__box__menu
+        %li.__new-group
+          = link_to new_group_path do
+            %i.fa.fa-edit
+          = link_to edit_user_path(current_user) do 
+            %i.fa.fa-cog
+
+
+  .group-box
+    .group1
+      %p.group-name group1
+      %p.latest-message hello
+    .group2
+      %p.group-name group2
+      %p.latest-message hola
+    .group3
+      %p.group-name group3
+      %p.latest-message sayonara
