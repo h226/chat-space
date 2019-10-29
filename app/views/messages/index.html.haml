@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+  %body
+
+  .chat-space
+    .chat-space__header
+      .chat-space__left-box
+        .chat-space__header__left-box__group
+          %h2 Current Group
+        .chat-space__header__lefe-box__list
+          %ul Member: members
+      .chat-space__header__edit__btn
+        %input.edit{type: "button", value: "Edit"}
+    .chat-space__messages
+      .messages__message
+        .messages__message__upper-info
+          .messages__message__upper-info__talker User1
+          .messages__message__upper-info__date 2019/10/24(Thu) 14:26:33
+        .messages__message__text Hola!      
+    .chat-space__form
+      .form__new-message
+        = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .input-box__image
+          = link_to 'input_image_file' do
+            %i.fa.fa-image
+        = f.submit 'Send', class: 'form__submit'
+
+=render partial: 'side_bar'
