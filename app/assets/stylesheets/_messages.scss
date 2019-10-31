@@ -6,54 +6,53 @@ html, body {
 
 .chat-space {
   width: calc(100vw - 300px);
-  height: 714px;
-  display: block;
   float: right;
-  margin: 0;
-  padding: 0;
-  overflow:  hidden;
   &__header {
     height: 100px;
-    border: solid 1px #eeeeee;
+    padding: 0px 40px;
     display: flex;
     justify-content: space-between;
-    padding: 0px 40px;
-    &__left-box__group {
-      margin-top: 35px;
-      display: block; 
-    } h2 {
+    border-bottom: solid 1px #eeeeee;
+    overflow: scroll;
+  &__left-box {
+    margin-top: 35px;
+  } .group-name {
       font-size: 20px;
       color: #333333;
-      display: block;
       margin-bottom: 15px;
-    } ul {
+      
+  } .title {
       font-size: 12px;
       color: #999999;
       list-style: none;
       display: flex;
-    } input.edit {
+    .group-members {
+      list-style: none;
+    }
+    }
+    .edit_btn {
       height: 40px;
       line-height: 40px;
       padding: 0 20px;
       margin-top: 30px;
       border: solid 1px #38aef0;
-      right: 40px;
-      position: absolute;
       color: #38aef0;
+      position: absolute;
+      right: 40px;
     }
   }
 }
 
-
   .chat-space__messages {
     background-color: #fafafa;
-    height: calc(100vw - 190px);
+    height: calc(100vh - 190px);
     display: block;
     padding: 46px 40px;
     margin: 0px;
-    .messages__message {
+    overflow: scroll;
+    //position: absolute;
+    } .messages__message {
       padding-bottom: 40px;
-      display: block;
     &__upper-info {
         margin-bottom: 10px;
         display: flex;
@@ -72,45 +71,50 @@ html, body {
         color: #434A54;
       }
       }
-    }
-  
+    
 
   .chat-space__form {
     background-color: #ddd;
-    height: 50px;
+    height: 90px;
+    box-sizing: border-box;
     bottom: 0;
+    padding: 20px 40px;
     position: fixed;
     width: calc(100vw - 300px);
-    padding: 20px 40px;
-    display:block;
   } .form__new-message {
-    display: flex;
-    width: 95%;
+    width: 75vw;
     height: 50px;
     position: relative;
-  } input.message {
+    float: left;
+    display: flex;
+  } .form__message {
     height: 50px;
-    width: 100%;
+    width: 66vw;
     color: #434a54;
-    padding: 0px 40px 0 10px;
+    padding: 0px 0px 0px 10px;
     background-color: white;
-    border: solid 1px white;
-  } i.fa.fa-image {
+    border-style: none;
+  } label.label {
     height: 21px;
     width: 22.3px;
     color: black;
     position: absolute;
-    top: 15px;
+    top: 7px;
     right: 130px;
     font-size: 25px;
-  } input.new-message__box__submit {
+    padding-right: 10px;
+  } .hoge {
+    display: none;
+  }.form__submit {
     width: 100px;
     height: 50px;
     margin-left: 15px;
     padding: 0 30px;
     background-color: #38aef0;
     color: white;
-    display: flex;
+    cursor: pointer;
+    //position: absolute;
+    float: right;
   }
 
 

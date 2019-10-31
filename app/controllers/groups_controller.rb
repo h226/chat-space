@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+  before_action :set_group
+
   def index
   end
 
@@ -22,6 +24,9 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def edit
   end
 
   private

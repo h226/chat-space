@@ -1,0 +1,27 @@
+=render partial: 'side_bar'
+
+.chat-space
+  .chat-space__header
+    .chat-space__header__left-box
+      .group-name
+        = @group.name
+      .title 
+        MEMBER:
+        .group-members
+          - @group.users.each do |user|
+            = user.name
+    = link_to edit_group_path(@group), class: "edit_btn" do
+      Edit
+
+  .chat-space__messages
+    =render @messages
+  
+  .chat-space__form
+    .form__new-message
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        %label.label
+          = fa_icon 'picture-o'
+          = f.file_field :upload_image, class: 'hoge'
+        = f.submit 'Send', class: 'form__submit'
+
