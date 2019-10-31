@@ -1,12 +1,16 @@
+=render partial: 'side_bar'
+
 .chat-space
   .chat-space__header
-    .chat-space__left-box
-      .chat-space__header__left-box__group
-        %h2 Current Group
-      .chat-space__header__lefe-box__list
-        %ul Member: members
-    .chat-space__header__edit__btn
-      %input.edit{type: "button", value: "Edit"}
+    .chat-space__header__left-box
+      .group-name
+        = @group.name
+      .title 
+        MEMBER:
+        .group-members
+          - @group.users.each do |user|
+            = user.name
+    = link_to 'Edit', edit_group_path(@group), class: "edit_btn"
 
   .chat-space__messages
     =render @messages
@@ -15,9 +19,8 @@
     .form__new-message
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        .input-box__image
-          = link_to 'input_image_file' do
-            %i.fa.fa-image
+        %label.label
+          = fa_icon 'picture-o'
+          = f.file_field :upload_image, class: 'hoge'
         = f.submit 'Send', class: 'form__submit'
 
-=render partial: 'side_bar'

@@ -2,23 +2,28 @@
   box-sizing: border-box;
   color: $white;
   width: 300px;
+  //overflow: auto;
+  float: left;
+  //height: 100%;
   .header {
     background-color: $side_blue_dark;
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
+    //position: fixed;
+    
     &__name {
       display: inline-block;
       font-size: $side_header_font;
       font-weight: bold;
-    }
+    } 
     &__lists {
       display: inline-block;
       float: right;
+      height: 100px;
       .list {
         display: inline-block;
-      }
-      .icon {
+      }.icon {
         color: $white;
         font-size: $side_header_font;
       }
@@ -28,10 +33,11 @@
   .groups {
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
-    padding: 0 20px;
+    padding: 20px 20px 0px;
+    overflow: auto;
     .group {
       box-sizing: border-box;
-      padding: 20px 0 40px;
+      padding: 0px 0px 40px;
       &__name {
         color: $white;
         font-size: $side_group_name;
