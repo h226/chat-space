@@ -20,8 +20,8 @@
     .form__new-message
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
-        %label.label
+        = f.label :image, class: 'label' do
           = fa_icon 'picture-o'
-          = f.file_field :upload_image, class: 'hoge'
+          = f.file_field :image, class: 'hoge'
         = f.submit 'Send', class: 'form__submit'
 
