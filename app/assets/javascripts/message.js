@@ -1,6 +1,5 @@
 $(function(){
   function buildHTML(message){
-    console.log(message)
     var image = message.image ? `<img class="lower-message__image" src=${message.image}>` : "";
       var html = `<div class="messages__message" data-message-id="${message.id}">
                     <div class="messages__message__upper-info">
@@ -49,11 +48,8 @@ $(document).on('turbolinks:load', function(){
   })
 
   var reloadMessages = function() {
-    console.log(0);
     var href = 'api/messages#index {:format=>"json"}'
     var last_message_id = $('.messages__message:last').data('message-id'); 
-    console.log(href);
-    console.log(last_message_id);
     $.ajax({
       url: href,
       type: 'GET',
@@ -61,7 +57,6 @@ $(document).on('turbolinks:load', function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log(messages)
       var insertHTML = '';
       messages.forEach(function(message){
         insertHTML = buildHTML(message);
@@ -70,7 +65,7 @@ $(document).on('turbolinks:load', function(){
       });
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   }
   if (window.location.href.match(/\/groups\/\d+\/messages/)){
