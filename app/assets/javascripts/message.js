@@ -47,7 +47,6 @@ $(document).on('turbolinks:load', function(){
     })
   })
 
-$(document).on('turbolinks:load', function(){
   var reloadMessages = function() {
     var href = 'api/messages#index {:format=>"json"}'
     var last_message_id = $('.messages__message:last').data('message-id'); 
@@ -72,4 +71,3 @@ $(document).on('turbolinks:load', function(){
   if (window.location.href.match(/\/groups\/\d+\/messages/)){
   setInterval(reloadMessages, 5000);
 }});
-})
