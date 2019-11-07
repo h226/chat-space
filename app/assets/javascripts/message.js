@@ -19,7 +19,7 @@ $(function(){
                   </div>`
     return html;
   }
-$(document).on('turbolinks:load', function(){
+
   $('#new_message').on('submit', function(e){
       e.preventDefault();
       var message = new FormData(this);
@@ -70,4 +70,4 @@ $(document).on('turbolinks:load', function(){
   }
   if (window.location.href.match(/\/groups\/\d+\/messages/)){
   setInterval(reloadMessages, 5000);
-}});
+};
