@@ -54,7 +54,7 @@ $(document).on('turbolinks:load', function(){
         alert("通信エラーです。ユーザーが表示できません。");
       });
   });
-  $(document).addEventLister("click", ".chat-group-user__btn--add", function() {
+  $(document).addEventListener("click", ".chat-group-user__btn--add", function() {
     console.log
     const userName = $(this).attr("data-user-name");
     const userId = $(this).attr("data-user-id");
@@ -64,7 +64,7 @@ $(document).on('turbolinks:load', function(){
     addDeleteUser(userName, userId);
     addMember(userId);
   });
-  $(document).addEventLister("click", ".chat-group-user__btn--remove", function() {
+  $(document).addEventListener("click", ".chat-group-user__btn--remove", function() {
     $(this)
       .parent()
       .remove();
