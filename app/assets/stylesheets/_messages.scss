@@ -85,7 +85,7 @@ html, body {
     width: calc(100vw - 340px);
     height: 50px;
     //position: relative;
-    float: left;
+    //float: left;
     display: flex;
   } .form__message {
     height: 50px;
@@ -100,12 +100,12 @@ html, body {
     width: 22.3px;
     color: black;
     position: absolute;
-    top: 7px;
-    right: 130px;
+    top: 27px;
+    right: 150px;
     font-size: 25px;
     padding-right: 10px;
   } .hoge {
-    display: inline-block;
+    display: none;
   }.form__submit {
     width: 100px;
     height: 50px;
@@ -115,7 +115,7 @@ html, body {
     color: white;
     cursor: pointer;
     //position: absolute;
-    float: right;
+    //float: right;
   }
 
 
