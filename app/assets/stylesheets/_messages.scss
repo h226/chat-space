@@ -82,9 +82,9 @@ html, body {
     position: fixed;
     width: calc(100vw - 300px);
   } .form__new-message {
-    width: 100%;
+    width: calc(100vw - 340px);
     height: 50px;
-    position: relative;
+    //position: relative;
     float: left;
     display: flex;
   } .form__message {
@@ -94,6 +94,7 @@ html, body {
     padding: 0px 0px 0px 10px;
     background-color: white;
     border-style: none;
+    position: relative;
   } label.label {
     height: 21px;
     width: 22.3px;
@@ -104,7 +105,7 @@ html, body {
     font-size: 25px;
     padding-right: 10px;
   } .hoge {
-    display: none;
+    display: inline-block;
   }.form__submit {
     width: 100px;
     height: 50px;
@@ -113,7 +114,7 @@ html, body {
     background-color: #38aef0;
     color: white;
     cursor: pointer;
-    position: absolute;
+    //position: absolute;
     float: right;
   }
 
